@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* global styles */
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* end of global styles */
+
+.myHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: aqua;
+    padding: 1rem;
+}
+
+.header-logo{
+    padding-left: 1.5343rem;
+}
+
+.mynav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mynav .nav-link{
+    padding-right: 1.5em;
+}
+
+/* hero section css */
+.hero-section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-intro > *{
+    padding: 1em;
+}
