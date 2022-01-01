@@ -17,13 +17,14 @@ ul{
 .myHeader{
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    background-color: aqua;
-    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    padding: 2rem 0;
 }
 
 .header-logo{
     padding-left: 1.5343rem;
+    color: #fff;
 }
 
 .mynav{
@@ -37,18 +38,128 @@ ul{
 
 /* hero section css */
 .hero-section{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../theatre.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
 .hero-intro{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-intro h1{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.hero-intro h4{
+    color: #fff;
+    font-size: 2rem;
 }
 
 .hero-intro > *{
     padding: 1em;
+}
+
+/* module section */
+.module-section{
+    padding: 3rem 2rem;
+
+}
+
+.module-intro{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.module-splitter{
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    /* padding: 2rem; */
+}
+
+.mycard{
+    background: #fff;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 2px 1px 2px 1px rgb(180, 226, 224);
+    text-align: center;
+    outline: none;
+    height: auto;
+    max-width: 100%;
+    transition: 0.6s ease-in-out;
+    
+}
+
+.mycard.scaler{
+    transform: scale(1.1);
+    transition: 0.6s ease;
+}
+
+.mycard-header{
+    background: cyan;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.mycard-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.mycard-body h6{
+    font-size: 0.9em;
+    padding: 1em;
+}
+
+.functions li{
+    padding: 0.5em;
+}
+
+.mycard-footer{
+    margin-top: 10px;
+}
+
+.mycard-footer button{
+    
+    border: none;
+    background: darkcyan;
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    position: relative;
+    width: 100%;
+}
+
+.mycard-footer button:hover{
+    background: darkgray;
+    color: darkcyan;
+    transition: 0.6s ease;
+}
+
+/* footer section */
+.myfooter{
+    background: rgb(87, 217, 250);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+
+.footer p{
+    font-weight: 700;
 }
