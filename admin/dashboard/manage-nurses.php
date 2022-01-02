@@ -3,6 +3,21 @@
 session_start();
 if (isset($_SESSION['admin_name'])) {
     include_once "../controller/config.php";
+
+    // if delete link is clicked
+    if (isset($_GET['delete'])) {
+        
+        $nurseID = $_GET['delete'];
+
+        $delQuery = "DELETE FROM nurses WHERE id = $nurseID";
+        $run = mysqli_query($mysqli, $delQuery);
+
+        if ($run) {
+            echo "<script>window.location='manage-nurses.php'</script>";
+        }else{
+            echo "<script>window.alert('Something Went Wrong!')</script>";
+        }
+    }
 }else {
     header("Location:../login.php");
 }
@@ -122,8 +137,8 @@ if (isset($_SESSION['admin_name'])) {
                                             <td><?php echo $myRow['Phone'];?></td>
                                             <td><?php echo $myRow['Email'];?></td>
                                             <td class="action-icons">
-                                                <a href="edit-nurse.php?edit=<?php echo $myRow['id']; ?>"><i class="icofont-ui-edit"></i></a>
-                                                <a href="manage-nurse.php?delete=<?php echo $myRow['id']; ?>"><i class="icofont-ui-delete"></i></a>
+                                                <!-- <a href="edit-nurse.php?edit=<?php echo $myRow['id']; ?>"><i class="icofont-ui-edit"></i></a> -->
+                                                <a href="manage-nurses.php?delete=<?php echo $myRow['id']; ?>"><i class="icofont-ui-delete"></i></a>
                                             </td>
                                         </tr>
                                         <?php endwhile; ?>  

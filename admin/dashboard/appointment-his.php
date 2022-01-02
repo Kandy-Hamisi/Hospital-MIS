@@ -126,11 +126,16 @@ if (isset($_SESSION['admin_name'])) {
                                                 $useRow = mysqli_fetch_assoc($run);
                                                 $user_id = $useRow['id'];
 
+                                               
 
                                                 if ($myRow['user_delete'] == 0) {
                                                     $currStat = "Active";
-                                                }else{
+                                                }else if($myRow['user_delete'] == 1){
                                                     $currStat = "Cancelled by user";
+                                                }else if($formatted > $formatapp){
+                                                    $currStat = "Fullfilled";
+                                                }else{
+                                                    $currStat = "Error";
                                                 }
                                             ?>
                                             <tr>

@@ -4,7 +4,21 @@ session_start();
 
 
 if (isset($_SESSION['patient_name'])) {
-    include_once "../controller/config.php"; 
+    include_once "../controller/config.php";
+
+    // if cancel button is clicked
+    if (isset($_GET['update'])) {
+        $appointmentId = $_GET['update'];
+
+        // update query
+        $sqlUpdate = "UPDATE appointments SET user_delete = 1 WHERE id = $appointmentId";
+        $run = mysqli_query($mysqli, $sqlUpdate);
+        if ($run) {
+            echo "<script>window.location='appHistory.php'</script>";
+        }else{
+            echo "<script>window.alert('An error occurerd')</script>";
+        }
+    }
 }else{
     header("Location:../login.php");
 }
@@ -134,7 +148,7 @@ if (isset($_SESSION['patient_name'])) {
                                                 <td><?php echo $myRow['appointment_date']. " / ". $myRow['appointment_time']; ?></td>
                                                 <td><?php echo $myRow['posting_Date']; ?></td>
                                                 <td><?php echo $currStat; ?></td>
-                                                <td><a href="">Cancel</a></td>
+                                                <td><a href="appHistory.php?update=<?php echo $myRow['id']; ?>">Cancel</a></td>
                                             </tr>
                                         <?php endwhile; ?>
                                     

@@ -129,8 +129,8 @@ if (isset($_SESSION['patient_name'])) {
                 <!-- Beginning Page Content -->
                 <div class="container-fluid">
                     <!-- page heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Add Patients</h1>
-                    <p>Note that only patients who will be alloted wards and beds should be added as in patients.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Book Appointment with Doctor</h1>
+                    <p>Select a doctor specialization and book Appointment</p>
 
                     <section class="spec-formSection">
                         <div class="card myCard bookAppointment">
