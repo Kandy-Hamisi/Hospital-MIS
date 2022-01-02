@@ -104,8 +104,8 @@ if (isset($_SESSION['admin_name'])) {
                 <!-- Beginning Page Content -->
                 <div class="container-fluid">
                     <!-- page heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Admin | Add Ward</h1>
-                    <p>Note that specializations cannot be inserted more than once</p>
+                    <h1 class="h3 mb-2 text-gray-800">Admin | Add Room</h1>
+                
 
                     <section class="form-splitter">
                         

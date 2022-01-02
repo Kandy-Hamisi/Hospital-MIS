@@ -99,8 +99,8 @@ if (isset($_SESSION['admin_name'])) {
                 <!-- Beginning Page Content -->
                 <div class="container-fluid">
                     <!-- page heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Add Specializarions</h1>
-                    <p>Note that specializations cannot be inserted more than once</p>
+                    <h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
+                    <p>Add Doctor Based on Their Specialization</p>
 
                     <section class="spec-formSection">
                         <div class="card myCard addDoc">

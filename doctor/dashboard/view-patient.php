@@ -214,7 +214,7 @@ if (isset($_POST['submit'])) {
                                     <tr>
                                         <th>Blood Pressure:</th>
                                         <td>
-                                            <input type="text" class="form-control" name="pressure" id="pressure" placeholder="<?php echo $patRow['id']; ?>">
+                                            <input type="text" class="form-control" name="pressure" id="pressure" placeholder="Blood Pressure">
                                         </td>
                                     </tr>
                                     <tr>

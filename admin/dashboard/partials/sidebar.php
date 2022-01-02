@@ -61,7 +61,7 @@
 </li>
 
 <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
+<!-- <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
         aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-user"></i>
@@ -73,7 +73,7 @@
             <a class="collapse-item" href="cards.html">Manage Users</a>
         </div>
     </div>
-</li>
+</li> -->
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"

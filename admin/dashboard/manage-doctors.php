@@ -3,6 +3,21 @@
 session_start();
 if (isset($_SESSION['admin_name'])) {
     include_once "../controller/config.php";
+
+    // if delete link is clicked
+    if (isset($_GET['delete'])) {
+        
+        $doctorID = $_GET['delete'];
+
+        $delQuery = "DELETE FROM doctors WHERE id = $doctorID";
+        $run = mysqli_query($mysqli, $delQuery);
+
+        if ($run) {
+            echo "<script>window.location='manage-doctors.php'</script>";
+        }else{
+            echo "<script>window.alert('Something Went Wrong!')</script>";
+        }
+    }
 }else {
     header("Location:../login.php");
 }
@@ -126,7 +141,7 @@ if (isset($_SESSION['admin_name'])) {
                                             <td><?php echo $myRow['CreateDate'];?></td>
                                             <td class="action-icons">
                                                 <a href="edit-doctor.php?edit=<?php echo $myRow['id']; ?>"><i class="icofont-ui-edit"></i></a>
-                                                <a href="manage-doctor.php?delete=<?php echo $myRow['id']; ?>"><i class="icofont-ui-delete"></i></a>
+                                                <a href="manage-doctors.php?delete=<?php echo $myRow['id']; ?>"><i class="icofont-ui-delete"></i></a>
                                             </td>
                                         </tr>
                                         <?php endwhile; ?>  
