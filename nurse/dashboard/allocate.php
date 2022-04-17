@@ -46,7 +46,7 @@ if (isset($_SESSION['nurse_name'])) {
 
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/sb-admin-2.css" rel="stylesheet">
-    <title>My admin Panel</title>
+    <title>Nurse Module</title>
     <style>
         .split-managements{
             display: grid;

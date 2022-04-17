@@ -1,5 +1,9 @@
 ### Sega Hospital Management Information System
 
+Create database 'segaHospital' in phpmyadmin then import segaHospital.sql from the sql folder
+
+acces the system in your browser after extracting it to the xammp/wampp specific folder
+
 - The system has four modules
     - Admin Module
         - add doctor and manage them
